@@ -1,0 +1,9 @@
+{
+  "name": "Project",
+  "version": "0.0.0",
+  "devDependencies": {
+    "grunt": "*",
+    "grunt-ftp-deploy": "*"
+        
+  }
+}
