@@ -482,16 +482,16 @@
     
     "build_systems":
     [
-       {
-        "name": "Start BrowserSync",
-        "shell_cmd": "browser-sync start --server --directory true --files **/*.css, **/*.js, **/*.html, **/*.less --open ${file}",
-        "working_dir": "${project_path}",
-        "shell": true
+       { 
+        "name": "Start BrowserSync", 
+        "shell_cmd": "browser-sync start --server --directory true --files **/*.css, **/*.js, **/*.html, **/*.less --open index.html",
+        "working_dir": "${file_path}", 
+        "shell": true 
        },
        {
         "name": "Start Node",
         "shell_cmd": "node ${file}",
-        "working_dir": "${project_path}",
+        "working_dir": "${file_path}",
         "shell": true
        },
        {
@@ -502,7 +502,7 @@
        },
        {
         "name": "Debug Node Application",
-        "shell_cmd": "start chrome \"http://127.0.0.1:8080/?ws=127.0.0.1:8080&port=5858\" && node node --debug-brk ${file}",
+        "shell_cmd": "start chrome \"http://127.0.0.1:8080/?ws=127.0.0.1:8080&port=5858\" && node --debug-brk ${file}",
         "working_dir": "${file_path}",
         "shell": true
        },
@@ -528,11 +528,15 @@
                             <a href="http://sublimetext.info/docs/en/reference/build_systems.html" target="_blank">http://sublimetext.info/docs/en/reference/build_systems.html</a></p>
 
                             <div class="cf">
-                                <demo image="demos/debug.gif" right="1" label="Demo with the Node-Inspector Builder"></demo>
+                                <demo image="demos/debug-node.gif" right="1" label="NodeInspector for Node Builder"></demo>
                             </div>
                             
                             <div class="cf">
-                                <demo right="1" label="Demo with the BrowserSync Builder" image="demos/browsersync.gif"></demo>
+                                <demo image="demos/debug-express.gif" right="1" label="NodeInspector for Express Builder"></demo>
+                            </div>
+
+                            <div class="cf">
+                                <demo right="1" label="BrowserSync Builder" image="demos/browsersync.gif"></demo>
                             </div>
 
                         </div>                                                
@@ -544,7 +548,7 @@
 
                             <p>Which you can archieve with <code class="subhint">Preferences: Key Bindings - User</code> and providing following line:<br />  
                             <code>{ "keys": ["YOUR SHORTCUT"], "command": "exec", "args": {"kill": true} } </code> </p>
-                            <p>The actual keybinding is <kbd>CTRL</kbd> + <kbd>BREAK</kbd> which wont function on my QWERTZ Layout, thats why im mentioning it.</p>
+                            <p>The actual keybinding is <kbd>CTRL</kbd> + <kbd>BREAK</kbd> which wont function on my QWERTZ layout under Windows, thats why im mentioning it.</p>
 
                             <p>When the JSON is valid you should have now your builders in the <kbd>CTRL</kbd> + <kbd>SHIFT</kbd> + <kbd>P</kbd> overlay under <br /><code class="subhint"> Build With: ------</code></p>
                         </div>

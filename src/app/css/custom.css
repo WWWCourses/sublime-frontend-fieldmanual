@@ -341,11 +341,10 @@ code.filehint {
 }
 
 .customcode {
-	margin-bottom: 15px;
-	height: 200px;
-	overflow-y: scroll;
-	overflow-x: hidden;
-	   box-shadow: inset -5px -5px 5px 0px #111;
+  margin-bottom: 15px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  box-shadow: inset -5px -5px 5px 0px #111;
   border-right: 1px solid #414141;
   border-bottom: 1px solid #414141;
   border-top: 1px solid #141414;

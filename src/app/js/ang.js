@@ -3,9 +3,7 @@ app.value('duScrollOffset', 100);
 
 app.controller('tutorial', ['$scope', '$document', function($scope, $document) {
     $scope.open = true;    
-
-    var cnt = $document[0].getElementById('content');
-
+    
     $scope.$watch('open', function(nv, ov) {
         if (nv === true) {
              $document[0].querySelector('.bookmarks').className = 'bookmarks';
@@ -30,7 +28,7 @@ app.directive('packagecontrol', [
                 plug: '@'
             },
             template: '<a href="https://packagecontrol.io/packages/{{enc(plug)}}" target="_blank">{{plug}}</a>',
-            link: function($scope, elem, att, ngModel) {
+            link: function($scope) {
                 $scope.enc = encodeURIComponent;
             }
         };
@@ -46,7 +44,8 @@ app.directive('hlcode', [
             scope: {
                 lang: '@'
             },
-            template: '<pre class="customcode"><code class="{{lang}}"><ng-transclude></ng-transclude></code></pre>'
+
+            template: '<pre class="customcode"><code class="{{lang}}"><ng-transclude></ng-transclude></code></pre>'                    
         };
     }
 ]);
@@ -63,7 +62,7 @@ app.directive('demo', ['ModalService', '$document',
                 right: '@'
             },
 
-            link: function($scope, $element, attrs, ctrl) {
+            link: function($scope) {
                 $scope.style = '';
                 var imageSrc = $scope.image;
                             
