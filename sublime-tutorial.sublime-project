@@ -1,0 +1,34 @@
+{
+	"folders":
+	[
+		{
+			"follow_symlinks": true,
+			"path": "./",
+			"folder_exclude_patterns" : ["lib", "node_modules"]
+		}
+	],
+	
+	"build_systems":
+    [
+       {
+       	"name": "Start BrowserSync",
+	    "shell_cmd": "browser-sync start --server --directory true --files \"**/*.css, **/*.js, **/*.html, **/*.less\" --index index.html",
+	    "working_dir": "${project_path}/src",
+	    "shell": true
+	   },
+
+	   {
+	   	"name": "Start Node",
+	   	"shell_cmd": "node ${file}",
+	    "working_dir": "${project_path}",
+	    "shell": true
+	   },
+
+	   {
+	   	"name": "Start Node (Debug:5858)",
+	   	"shell_cmd": "start chrome \"http://127.0.0.1:8080/?ws=127.0.0.1:8080&port=5858\" && node --debug ${file}",
+	    "working_dir": "${project_path}",
+	    "shell": false
+	   }
+    ]
+}

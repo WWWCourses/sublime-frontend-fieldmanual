@@ -1,0 +1,9 @@
+*.sublime-workspace
+node_modules/*
+build/*
+release/*
+Thumbs.db
+src/app/lib
+cache/*
+npm-debug.log
+docs/*
