@@ -1,26 +1,29 @@
 var app = angular.module('sublime-tutorial', ['duScroll', 'ngTouch', 'angularModalService']);
 app.value('duScrollOffset', 100);
 
-app.controller('tutorial', ['$scope', '$document', function($scope, $document) {
-    $scope.open = true;    
-    
-    $scope.$watch('open', function(nv, ov) {
-        if (nv === true) {
-             $document[0].querySelector('.bookmarks').className = 'bookmarks';
-             $document[0].getElementById('toggle').className = '';
-        } else {
-             $document[0].querySelector('.bookmarks').className = 'bookmarks open';
-             $document[0].getElementById('toggle').className = 'open';
-        }   
-    });
+app.controller('tutorial', ['$scope', '$document',
+    function($scope, $document) {
+        $scope.open = true;
 
-    $scope.toggle = function() {
-        $scope.open ? $scope.open = false : $scope.open = true;            
-    };
+        $scope.$watch('open', function(nv, ov) {
+            if (nv === true) {
+                $document[0].querySelector('.bookmarks').className = 'bookmarks';
+                $document[0].getElementById('toggle').className = '';
+            } else {
+                $document[0].querySelector('.bookmarks').className = 'bookmarks open';
+                $document[0].getElementById('toggle').className = 'open';
+            }
+        });
 
-}]);
+        $scope.toggle = function() {
+            $scope.open ? $scope.open = false : $scope.open = true;
+        };
+
+    }
+]);
 
 app.directive('packagecontrol', [
+
     function() {
         return {
             restrict: 'AE',
@@ -37,6 +40,7 @@ app.directive('packagecontrol', [
 
 
 app.directive('hlcode', [
+
     function() {
         return {
             restrict: 'AE',
@@ -45,16 +49,16 @@ app.directive('hlcode', [
                 lang: '@'
             },
 
-            template: '<pre class="customcode"><code class="{{lang}}"><ng-transclude></ng-transclude></code></pre>'                    
+            template: '<pre class="customcode"><code class="{{lang}}"><ng-transclude></ng-transclude></code></pre>'
         };
     }
 ]);
 
 
-app.directive('demo', ['ModalService', '$document',
-    function(ModalService, $document) {
+app.directive('demo', ['ModalService', '$document', '$timeout',
+    function(ModalService, $document, $timeout) {
         return {
-            restrict: 'AE',            
+            restrict: 'AE',
             template: '<span class="modalBtn" style={{style}} ng-click="do()"><img src="app/css/watch.png" width="20"/>  {{label}}</span>',
             scope: {
                 image: '@',
@@ -65,13 +69,13 @@ app.directive('demo', ['ModalService', '$document',
             link: function($scope) {
                 $scope.style = '';
                 var imageSrc = $scope.image;
-                            
+
                 if (!$scope.label) {
                     $scope.label = 'Watch Demo';
                 }
 
                 if ($scope.right) {
-                    $scope.style= 'float:right;';
+                    $scope.style = 'float:right;';
                 }
 
                 $scope.do = function() {
@@ -80,9 +84,25 @@ app.directive('demo', ['ModalService', '$document',
                         template: '<div id="openModal" class="modalDialog" ng-click="modal.closeModal()"><div><img ng-src="{{modal.src}}" /> </div> </div>',
                         controller: function($scope, $element, close) {
 
-                            this.closeModal = function() {
+                            function closeHelper() {
                                 $document[0].body.style.overflow = 'auto';
-                                close();
+                                $document[0].querySelector('.modalDialog').className = 'modalDialog kill';
+
+                                $timeout(function() {
+                                    close();
+                                }, 510);
+                            }
+
+                            this.closeModal = function() {
+                                closeHelper();
+                            };
+
+                            $document[0].onkeydown = function(evt) {
+                                evt = evt || window.event;
+
+                                if (evt.keyCode == 27) {
+                                    closeHelper();
+                                }
                             };
 
                             this.src = imageSrc;

@@ -9,13 +9,13 @@
         <link rel="stylesheet" href="app/css/simplegrid.css">
         <link rel="stylesheet" href="app/css/custom.css">
         <link rel="stylesheet" href="app/fonts/fonts.css">
-        
-    
+
+
         <link href="app/css/monokai_sublime.css" rel="stylesheet" type="text/css">
         <link href="app/css/keys.css" rel="stylesheet" type="text/css">
-        
+
         <script type="text/javascript" src="app/js/angular.js"></script>
-        
+
         <script type="text/javascript" src="app/js/ang.js"></script>
         <script type="text/javascript" src="app/js/highlight.pack.js"></script>
         <script type="text/javascript" src="app/js/ang-duscroll.js"></script>
@@ -54,7 +54,7 @@
         <div class="hero">
             <h1>Sublime Text 3 Fieldmanual</h1>
             <h2>For Frontend Developers</h2>
-        </div>        
+        </div>
         <div class="bookmarks">
             <div id="menu">
                 <ul du-spy-context id="nav">
@@ -68,7 +68,7 @@
                         <li><a du-smooth-scroll du-scrollspy href="#kbd-d">D stands for Duplicate</a></li>
                         <li><a du-smooth-scroll du-scrollspy href="#kbd-b">B stands for Build</a></li>
                     </ul>
-                    </li>                            
+                    </li>
                     <li><a du-smooth-scroll du-scrollspy href="#working-with-panels-mouseless">Working with Panels Mouseless</a></li>
 
                     <li><a du-smooth-scroll du-scrollspy href="#howto-configure-sublime-text">Howto Configure Sublime Text</a></li>
@@ -78,7 +78,7 @@
 
                     <ul>
                         <li><a du-smooth-scroll du-scrollspy href="#plug-jshintgutter">JSHint Gutter</a></li>
-                        <li><a du-smooth-scroll du-scrollspy href="#plug-docblockr">DocBlockr</a></li>                                
+                        <li><a du-smooth-scroll du-scrollspy href="#plug-docblockr">DocBlockr</a></li>
                         <li><a du-smooth-scroll du-scrollspy href="#plug-favs">My favourite Sublime Text Plugins</a></li>
                     </ul>
                     </li>
@@ -100,17 +100,17 @@
             </div>
         </div>
         <div class="content" id="content">
-            <section id="who-is-this-for">                                            
+            <section id="who-is-this-for">
                 <h3>Whos this for</h3>
-                
-                <p>This guide is especially targeted for frontend developers who want to transform their Sublime Text 3 environment into a full fledged JavaScript IDE and want to learn some advanced things which can boost their productivity.</p> 
+
+                <p>This guide is especially targeted for frontend developers who want to transform their Sublime Text 3 environment into a full fledged JavaScript IDE and want to learn some advanced things which can boost their productivity.</p>
 
                 <p>I also want to highlight that this is a sortof a living document, when im encountering new good stuff in the future i'll update this document</p>
             </section>
             <section id="the-magic-of-shortcuts">
-                <h3 >The Magic of Shortcuts</h3>                        
+                <h3 >The Magic of Shortcuts</h3>
                 <p>Default Shortcuts - i thought its even worth to mention the Shortcuts which are default even in other Editors or already known by most Sublime Users</p>
-                
+
                 <div class="card ind-2 cf">
                     <h5 class="cf">Find first Word<span class="light-keys right"><kbd>CTRL</kbd> + <kbd>;</kbd></span></h5>
 
@@ -122,7 +122,7 @@
                 <div class="card ind-2 cf">
                     <h5 class="cf">Goto Line<span class="light-keys right"><kbd>CTRL</kbd> + <kbd>G</kbd></span></h5>
 
-                    <p>Search/Replace in your document or complete Project</p>                
+                    <p>Search/Replace in your document or complete Project</p>
                     <demo right="1" image="demos/ctrlg.gif"></demo>
                 </div>
 
@@ -138,7 +138,7 @@
 
                     <p>Opens or closes the Sidebar</p>
                 </div>
-                
+
                 <div class="card ind-2 cf">
                     <h5 class="cf">Last Closed File<span class="light-keys right"><kbd>CTRL</kbd> + <kbd>SHIFT</kbd> + <kbd>T</kbd></span></h5>
 
@@ -156,17 +156,18 @@
                     <h5 class="cf">Search/Replace<span class="light-keys right"><kbd>CTRL</kbd> + <kbd>ALT</kbd> + <kbd>F</kbd></span></h5>
 
                     <p>Search/Replace in your document or complete Project</p>
-                    
+
                 </div>
 
-            </section>  
-        
+            </section>
+
             <section id="kbd-p">
                 <h4 class="ind">P stands for Project</h4>
-                            
+
+                <p class="ind">The first thing you should do is - making an projectfile in Sublime Text, we will learn later why.</p>
                 <div class="card ind-2 cf">
                     <h5 class="cf">Quick File Search<span class="light-keys right"><kbd>CTRL</kbd> + <kbd>P</kbd></span></h5>
-                
+
                     <p>With this shortcut you can access all available files of your opened folder, or all files you configured in your Sublime Text Project</p>
                     <demo right="1" image="demos/ctrlp.gif"></demo>
                 </div>
@@ -184,12 +185,12 @@
                 </div>
             </section>
 
-                            
+
                 <section id="kbd-r">
                     <h4 class="ind">R stands for Read Symbols</h4>
-                    
-                    <p class="ind">All R related shortcuts are searching for so called <strong>Symbols</strong>, symbols are specific patterns which describe an function or variable declaration. You also can config symbols your own way which is described in the next chapter.</p>                
-                            
+
+                    <p class="ind">All R related shortcuts are searching for so called <strong>Symbols</strong>, symbols are specific patterns which describe an function or variable declaration. You also can config symbols your own way which is described in the next chapter.</p>
+
                     <div class="card ind-2 cf">
                         <h5 class="cf">Read Symbols in File<span class="light-keys right"><kbd>CTRL</kbd> + <kbd>R</kbd></span></h5>
                         <p>Opens an overlay (You can also use <kbd>CTRL</kbd> + <kbd>P</kbd> and type an @) and a searchable list of found Symbols (functions and variables) of the current File.</p>
@@ -199,7 +200,7 @@
 
                     <div class="card ind-2 cf">
                         <h5 class="cf">Read Symbols in Project<span class="light-keys right"><kbd>CTRL</kbd> + <kbd>SHIFT</kbd> + <kbd>R</kbd></span></h5>
-                        
+
                         <p>Opens an overlay with a searchable list of all available symbols of all files in your project or opened folder.</p>
                         <demo right="1" image="demos/ctrlshiftr.gif"></demo>
                     </div>
@@ -207,9 +208,9 @@
 
                 <section id="kbd-j">
                     <h4 class="ind">J stands for Joining</h4>
-                        
+
                     <p class="ind">All J related shortcuts standing for join or joined things like codeblocks.</p>
-                            
+
                     <div class="card ind-2 cf">
                         <h5 class="cf">Join Lines<span class="light-keys right"><kbd>CTRL</kbd> + <kbd>J</kbd></span></h5>
                         <p>Joins on each hit on the shortcut the next available unjoined line - to the line where your cursor is positioned.</p>
@@ -225,19 +226,19 @@
 
                 <section id="kbd-l">
                     <h4 class="ind">L stands for Lines</h4>
-                    
+
                     <p class="ind">All L related shortcuts standing for Line related stuff, marking single or multiple lines or split a big selected block into single cursors.</p>
-                    
+
                     <div class="card ind-2 cf">
                         <h5 class="cf">Mark Line<span class="light-keys right"><kbd>CTRL</kbd> + <kbd>L</kbd></span></h5>
-                        
+
                         <p>Marks line at the Cursor position, on multiple shortcuts hits it marks multiple lines based of the last marked line.</p>
                         <demo right="1" image="demos/ctrll.gif"></demo>
                     </div>
 
                     <div class="card ind-2 cf">
                         <h5 class="cf">Split multiple marked Lines into multiple Cursors<span class="light-keys right"><kbd>CTRL</kbd> + <kbd>SHIFT</kbd> + <kbd>L</kbd></span></h5>
-                        
+
                         <p>When you have multiple lines selected and hit this shortcut, the marked area will split into multiple cursors for each line.</p>
                         <demo right="1" image="demos/ctrlshiftl.gif"></demo>
                     </div>
@@ -245,25 +246,27 @@
 
                 <section id="kbd-d">
                     <h4 class="ind">D stands for Duplicate</h4>
-                        <p class="ind">Among <a du-smooth-scroll du-scrollspy href="#working-with-panels-mouseless">Multiple Panels</a> the "Find Duplicate" Feature is one of the great features why Sublime became so popular.</p>
+                        <p class="ind">Among <a du-smooth-scroll du-scrollspy href="#working-with-panels-mouseless">Multiple Panels</a> the "Find Duplicate" Feature is one of the great features why Sublime Text became so popular.</p>
                     <div class="card ind-2 cf">
                         <h5 class="cf">Find Duplicate<span class="light-keys right"><kbd>CTRL</kbd> + <kbd>D</kbd></span></h5>
-                        
+
                         <p>Marks the word on cursor position, marks on each shortcut hit a word similar to your selection and marks it.</p>
                         <demo right="1" image="demos/ctrld.gif"></demo>
                     </div>
 
                     <div class="card ind-2 cf">
                         <h5 class="cf">Duplicate Selection<span class="light-keys right"><kbd>CTRL</kbd> + <kbd>SHIFT</kbd> + <kbd>D</kbd></span></h5>
-                        
+
                         <p>Duplicates any marked area directly after itself (perfect for HTML editing)</p>
                         <demo right="1" image="demos/ctrlshiftd.gif"></demo>
                     </div>
                 </section>
-                
+
                 <section id="kbd-b">
                     <h4 class="ind">B stands for Build</h4>
-                            
+                    
+                    <p class="ind">One of the reasons why we should use projectfiles in Sublime Text, we will learn later why</p>
+
                     <div class="card ind-2 cf">
                         <h5 class="cf">Build<span class="light-keys right"><kbd>CTRL</kbd> + <kbd>B</kbd></span></h5>
                         <p>Uses always the Builder which you last used with <kbd>CTRL</kbd> + <kbd>SHIFT</kbd> + <kbd>B</kbd></p>
@@ -278,21 +281,21 @@
 
                 <section id="working-with-panels-mouseless">
                     <h3 >Working with Panels Mouseless</h3>
-                    
+
                     <p>For what Sublime Text became famous is that you can open multiple panels in your editor.</p>
                     <p><span><kbd>CTRL</kbd> + <kbd>[0-4]</kbd></span> Sets the cursor into an panel
                     <br />
                     <kbd>CTRL</kbd> + <kbd>SHIFT</kbd> + <kbd>[0-4]</kbd> Moves any document from your actual panel to panel 0 - 4</p>
 
                     <p class="nm"><span><kbd>ALT</kbd> + <kbd>SHIFT</kbd> + <kbd>[0-9]</kbd></span> Opens one out of 7 layouts Sublime Text can provide</p>
-                            
+
                     <ul class="ind">
                         <li><kbd>1</kbd> - <kbd>4</kbd> Opens 1 to 4 columns</li>
                         <li><kbd>5</kbd> Opens 4 Panels "GridStyle" (2 horizontal, 2 vertical)  </li>
                         <li><kbd>8</kbd> - <kbd>9</kbd> Opens 2 or 3 panels horizontally</li>
-                    </ul>                                
+                    </ul>
 
-                        
+
                     <p>Also i highly recommend the <packagecontrol plug="MaxPane"></packagecontrol> plugin which you can get from PackageControl. After install you can maximize your current panel with <kbd>CTRL</kbd> + <kbd>SHIFT</kbd> + <kbd>ENTER</kbd> and also go back into your previous panellayout.</p>
 
                 </section>
@@ -315,7 +318,7 @@
 
                 <section id="installing-packagecontrol-and-nodejs">
                     <h3>Installing PackageControl and NodeJS</h3>
-                    
+
                     <p>When you are here for the JavaScript part and havent done it already - download <a href="https://nodejs.org/en/" target="_blank">NodeJS</a> and install it on your operating system.</p>
 
                     <p>The PackageControl installation is pretty easy - just go there <a href="https://packagecontrol.io/installation" target="_blank">PackageControl</a> and copy the code. After that open the console via the filemenu <code class="filehint">View -> Show Console</code> paste the code in and hit enter.</p>
@@ -327,19 +330,19 @@
                 <section>
                     <div id="favourite-javascript-plugins">
                         <h3>Configs for popular JS-Plugins</h3>
-                        
+
                         <p>Installing stuff is thanks to the Package Manager pretty easy: Just go with <code class="subhint">Package Control: Install Package</code></p>
                     </div>
-                    
+
                     <div id="plug-jshintgutter">
                         <h4 class="ind">JSHint Gutter</h4>
-                        
+
                         <p class="ind">The first thing you need to do after installation is set your NodeJS Path that can be archieved via the Filemenu: <code class="filehint">Preferences -> Package Settings -> JSHint Gutter -> Set node Path.</code> I also highly recommend that you <strong>dont</strong> activate lint_on_edit when you arent on an powerful machine.</p>
 
                         <p class="ind">After that you can setup your wanted JSHint configuration via the filemenu: <code class="filehint">Preferences -> Package Settings -> JSHint Gutter -> Set Linting Preferences</code></p>
-                        
+
                         <p class="ind">When you need a "kickstart" into JSHint - here is my config im using or lookup the options <a href="http://jshint.com/docs/options/" target="_blank">here</a></p>
-                        
+
                         <div class="ind-2">
                         <hlcode lang="json">{
     "browser": true,
@@ -370,9 +373,9 @@
 }</hlcode></div>
                         <div class="card ind-2 cf">
                             <h5>You are set now</h5>
-                            
-                            <p>Now - everytime when you save and something isnt written after your setup rules, you will get warnings in your Gutter.</p> 
-                            
+
+                            <p>Now - everytime when you save and something isnt written after your setup rules, you will get warnings in your Gutter.</p>
+
                             <p>The warnings will showup in Sublime Text in the Statusbar (when the cursor is on an warning) or when you are using the shortcut <kbd>CTRL</kbd> + <kbd>ALT</kbd> + <kbd>J</kbd> it opens an overlay with the actual warnings.</p>
                             <demo right="1" image="demos/gutter.gif"></demo>
                         </div>
@@ -381,8 +384,8 @@
 
                     <div id="plug-docblockr">
                         <h4 class="ind">DocBlockr</h4>
-                    
-                        <p class="ind">Just type /** over an function/method variable/property declaration and hit enter.</p> 
+
+                        <p class="ind">Just type /** over an function/method variable/property declaration and hit enter.</p>
 
                         <p class="ind">Little tip for your configuration: im typeof the guy who uses underscore prefixes for private methods, with that config DocBlockr will automatically add the @private docattribute when it sees anything with an underscore prefix.</p>
 
@@ -393,15 +396,15 @@
     "tags": ["@private"]
 }]
 }</hlcode></div>
-                        
+
                         <div class="card ind-2 cf">
                             <h5>You are set now</h5>
-                            
+
                             <p>When you are using yuidoc for your documentation stuff you can use the <code>"jsdocs_extra_tags": [""]</code> property for providing more default tags (like @for)</p>
                             <demo right="1" image="demos/docblockr.gif"></demo>
-                        </div>                                            
-                    </div>                    
-                        
+                        </div>
+                    </div>
+
                     <div id="plug-favs">
                         <h4 class="ind">My favourite Sublime Text Plugins</h4>
 
@@ -422,7 +425,7 @@
                         </div>
 
                     </div>
-                </section>  
+                </section>
 
                 <section>
                     <div id="js-codeintelligence">
@@ -439,7 +442,7 @@
                         <p class="ind">After that you have to install the NodeJS package <strong>tern</strong>, you archieve this with: <code>npm install</code> in the "tern_for_sublime" directory.</p>
 
                     </div>
-                    
+
                     <div id="js-codeintel-setup">
                         <h4 class="ind">Setup TernJS File</h4>
 
@@ -456,12 +459,12 @@
 
   "loadEagerly": [
     "src/app/**/*.js"
-  ], 
+  ],
 
   "dontLoad": [
     "src/app/lib/**/**"
   ],
-  
+
   "plugins": {
     "complete_strings": {},
     "node": {},
@@ -473,26 +476,26 @@
 }</hlcode></div>
                         <div class="card ind-2 cf">
                             <h5>What are this Settings</h5>
-                            
+
                             <p>
                                 <code>libs</code> Basically this are "static" preparsed codedefinitions, read more <a href="http://ternjs.net/doc/manual.html#plugin_third_party" target="_blank">here</a><br />
                                 <code>loadEagerly</code> This is the path where your sourcefiles should be<br />
                                 <code>dontLoad</code> Exclude folderpatterns (your minified stuff should be here, or bower_components)<br />
                                 <code>plugins</code> TernJS has many Plugins to choose from (requireJS, Angular, CommonJS) so it can load and parse the source. Read more <a href="http://ternjs.net/doc/manual.html#plugins" target="_blank">here</a><br />
-                            </p>                        
+                            </p>
                         </div>
 
                         <div class="card ind-2 cf">
                             <h5>ProTip</h5>
-                            
+
                             <p>Use any JavaScript docsystem (yuidoc, jsdoc) to comment your code and add in your .tern-project file <code>doc_commend: { "fullDocs": true }</code> so TernJS spits out the comments and even gives typehinting of your stuff</p>
-                            
-                            <p>Very good Sublime Plugin for easier commentblock handling i already introduced <a du-smooth-scroll du-scrollspy href="#plug-docblockr">above</a></p>
+
+                            <p>Very good Sublime Text Plugin for easier commentblock handling i already introduced <a du-smooth-scroll du-scrollspy href="#plug-docblockr">above</a></p>
                             <demo right="1" image="demos/codeintelligence.gif"></demo>
                         </div>
 
                     </div>
-                </section>                        
+                </section>
 
                     <section id="setup-your-projectfile">
                         <h3>Setup your Projectfile</h3>
@@ -520,20 +523,20 @@
 
                             <p>One of the conveniences when you are using IDEs is to compile or debug in your actual development environment.</p>
 
-                            <p>Sublime has a really nice CLI Integration for so called builders.</p>
+                            <p>Sublime Text has a really nice CLI Integration for so called builders.</p>
 
                             <p>My favourite 2 Builders which im using are for node-inspector which is actually an node debugger tool (so you can for example debug express applications in your: Chrome DevTools) and BrowserSync for frontend work (so you can view your designs and UI synchronously on multiple devices - and you can even javascript debug them with integrated WEINRE).</p>
                         </div>
 
                         <div id="install-nodejs-modules">
                             <h4 class="ind">Installing NodeJS Modules</h4>
-                            
+
                             <p class="ind">Before we can configure them we have to install the node-packages globally first, thats easy accomplished via your CLI: <code>npm install -g browser-sync && npm install -g node-inspector</code></p>
                         </div>
 
                         <div id="config-builder-confs">
                             <h4 class="ind">Builder Configs</h4>
-                            
+
                             <p class="ind">After that we edit our projectfile via <code class="subhint">Project: Edit Project</code> and hang an "build_systems" property after our "folders" property on.</p>
 
                             <p class="ind">Here is my basic boilerplate file for BrowserSync, starting active file with NodeJS, debugging active file via NodeInspector and break at first Line and debugging "running" express instances. You can also provide your grunt and gulp tasks this way for direct use in Sublime Text.</p>
@@ -547,14 +550,14 @@
             "folder_exclude_patterns" : ["lib", "node_modules"]
         }
     ],
-    
+
     "build_systems":
     [
-       { 
-        "name": "Start BrowserSync", 
+       {
+        "name": "Start BrowserSync",
         "shell_cmd": "browser-sync start --server --directory true --files **/*.css, **/*.js, **/*.html, **/*.less --open index.html",
-        "working_dir": "${file_path}", 
-        "shell": true 
+        "working_dir": "${file_path}",
+        "shell": true
        },
        {
         "name": "Start Node",
@@ -598,7 +601,7 @@
                             <div class="cf">
                                 <demo image="demos/debug-node.gif" right="1" label="NodeInspector for Node Builder"></demo>
                             </div>
-                            
+
                             <div class="cf">
                                 <demo image="demos/debug-express.gif" right="1" label="NodeInspector for Express Builder"></demo>
                             </div>
@@ -607,14 +610,14 @@
                                 <demo right="1" label="BrowserSync Builder" image="demos/browsersync.gif"></demo>
                             </div>
 
-                        </div>                                                
+                        </div>
 
                         <div class="card ind-2 cf">
                             <h5>ProTip</h5>
-                            
+
                             <p>One little thing i highly recommend though is to change the "exec quit" button of Sublime Text, otherwise you have to kill all your nodeprocesses manually via <code>taskkill /F /IM node.exe</code> (or <code>killall node</code>).</p>
 
-                            <p>Which you can archieve with <code class="subhint">Preferences: Key Bindings - User</code> and providing following line:<br />  
+                            <p>Which you can archieve with <code class="subhint">Preferences: Key Bindings - User</code> and providing following line:<br />
                             <code>{ "keys": ["YOUR SHORTCUT"], "command": "exec", "args": {"kill": true} } </code> </p>
                             <p>The actual keybinding is <kbd>CTRL</kbd> + <kbd>BREAK</kbd> which wont function on my QWERTZ layout under Windows, thats why im mentioning it.</p>
 
@@ -630,7 +633,7 @@
                             <span class='st_googleplus_large' displayText='Google +'></span>
                             <span class='st_twitter_large' displayText='Tweet'></span>
                             <span class='st_reddit_large' displayText='Reddit'></span>
-                            <span class='st_facebook_large' displayText='Facebook'></span>                        
+                            <span class='st_facebook_large' displayText='Facebook'></span>
                         </footer>
     </body>
 </html>
