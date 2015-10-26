@@ -66,6 +66,7 @@
                         <li><a du-smooth-scroll du-scrollspy href="#kbd-j">J stands for Joining</a></li>
                         <li><a du-smooth-scroll du-scrollspy href="#kbd-l">L stands for Lines</a></li>
                         <li><a du-smooth-scroll du-scrollspy href="#kbd-d">D stands for Duplicate</a></li>
+                        <li><a du-smooth-scroll du-scrollspy href="#kbd-b">B stands for Build</a></li>
                     </ul>
                     </li>                            
                     <li><a du-smooth-scroll du-scrollspy href="#working-with-panels-mouseless">Working with Panels Mouseless</a></li>
@@ -73,10 +74,12 @@
                     <li><a du-smooth-scroll du-scrollspy href="#howto-configure-sublime-text">Howto Configure Sublime Text</a></li>
                     <li><a du-smooth-scroll du-scrollspy href="#installing-packagecontrol-and-nodejs">Installing PackageControl and NodeJS</a></li>
                     <li><a du-smooth-scroll du-scrollspy href="#favourite-javascript-plugins">Configs for popular JS-Plugins</a>
+
+
                     <ul>
                         <li><a du-smooth-scroll du-scrollspy href="#plug-jshintgutter">JSHint Gutter</a></li>
                         <li><a du-smooth-scroll du-scrollspy href="#plug-docblockr">DocBlockr</a></li>                                
-                        <li><a du-smooth-scroll du-scrollspy href="#plug-favs">My favourite Sublime Text Plugins</a></li>       
+                        <li><a du-smooth-scroll du-scrollspy href="#plug-favs">My favourite Sublime Text Plugins</a></li>
                     </ul>
                     </li>
 
@@ -105,9 +108,59 @@
                 <p>I also want to highlight that this is a sortof a living document, when im encountering new good stuff in the future i'll update this document</p>
             </section>
             <section id="the-magic-of-shortcuts">
-                <h3 >The Magic of Shortcuts</h3>
-           </section> 
+                <h3 >The Magic of Shortcuts</h3>                        
+                <p>Default Shortcuts - i thought its even worth to mention the Shortcuts which are default even in other Editors or already known by most Sublime Users</p>
+                
+                <div class="card ind-2 cf">
+                    <h5 class="cf">Find first Word<span class="light-keys right"><kbd>CTRL</kbd> + <kbd>;</kbd></span></h5>
 
+                    <p>Opens an menuoverlay where you can find the first word of anything you type</p>
+                    <p>On German Layouts its <kbd>CTRL</kbd> + <kbd style="font-family: 'Arial'">ü</kbd></p>
+                    <demo right="1" image="demos/ctrlsemi.gif"></demo>
+                </div>
+
+                <div class="card ind-2 cf">
+                    <h5 class="cf">Goto Line<span class="light-keys right"><kbd>CTRL</kbd> + <kbd>G</kbd></span></h5>
+
+                    <p>Search/Replace in your document or complete Project</p>                
+                    <demo right="1" image="demos/ctrlg.gif"></demo>
+                </div>
+
+                <div class="card ind-2 cf">
+                    <h5 class="cf">Copy History<span class="light-keys right"><kbd>CTRL</kbd> + <kbd>K</kbd> + <kbd>V</kbd></span></h5>
+
+                    <p>Opens Contextmenu with the Clipboardhistory to choose from</p>
+                    <demo right="1" image="demos/ctrlkv.gif"></demo>
+                </div>
+
+                <div class="card ind-2 cf">
+                    <h5 class="cf">Toggle Sidebar<span class="light-keys right"><kbd>CTRL</kbd> + <kbd>K</kbd> + <kbd>B</kbd></span></h5>
+
+                    <p>Opens or closes the Sidebar</p>
+                </div>
+                
+                <div class="card ind-2 cf">
+                    <h5 class="cf">Last Closed File<span class="light-keys right"><kbd>CTRL</kbd> + <kbd>SHIFT</kbd> + <kbd>T</kbd></span></h5>
+
+                    <p>Opens last closed File</p>
+                </div>
+
+                <div class="card ind-2 cf">
+                    <h5 class="cf">Search in Document<span class="light-keys right"><kbd>CTRL</kbd> + <kbd>F</kbd></span></h5>
+
+                    <p>Default Search in Filter Dialog will open in your Statusbar</p>
+
+                </div>
+
+                <div class="card ind-2 cf">
+                    <h5 class="cf">Search/Replace<span class="light-keys right"><kbd>CTRL</kbd> + <kbd>ALT</kbd> + <kbd>F</kbd></span></h5>
+
+                    <p>Search/Replace in your document or complete Project</p>
+                    
+                </div>
+
+            </section>  
+        
             <section id="kbd-p">
                 <h4 class="ind">P stands for Project</h4>
                             
@@ -129,7 +182,7 @@
                     <p>This shortcut gives you a List over all your "touched" projects.</p>
                     <demo right="1" image="demos/ctrlaltp.gif"></demo>
                 </div>
-                </section>
+            </section>
 
                             
                 <section id="kbd-r">
@@ -173,7 +226,7 @@
                 <section id="kbd-l">
                     <h4 class="ind">L stands for Lines</h4>
                     
-                    <p class="ind">All L related shortcuts standing for Line related Stuff, marking single or multiple lines or split a big selected block into single cursors.</p>
+                    <p class="ind">All L related shortcuts standing for Line related stuff, marking single or multiple lines or split a big selected block into single cursors.</p>
                     
                     <div class="card ind-2 cf">
                         <h5 class="cf">Mark Line<span class="light-keys right"><kbd>CTRL</kbd> + <kbd>L</kbd></span></h5>
@@ -192,7 +245,7 @@
 
                 <section id="kbd-d">
                     <h4 class="ind">D stands for Duplicate</h4>
-                    
+                        <p class="ind">Among <a du-smooth-scroll du-scrollspy href="#working-with-panels-mouseless">Multiple Panels</a> the "Find Duplicate" Feature is one of the great features why Sublime became so popular.</p>
                     <div class="card ind-2 cf">
                         <h5 class="cf">Find Duplicate<span class="light-keys right"><kbd>CTRL</kbd> + <kbd>D</kbd></span></h5>
                         
@@ -207,7 +260,22 @@
                         <demo right="1" image="demos/ctrlshiftd.gif"></demo>
                     </div>
                 </section>
-                        
+                
+                <section id="kbd-b">
+                    <h4 class="ind">B stands for Build</h4>
+                            
+                    <div class="card ind-2 cf">
+                        <h5 class="cf">Build<span class="light-keys right"><kbd>CTRL</kbd> + <kbd>B</kbd></span></h5>
+                        <p>Uses always the Builder which you last used with <kbd>CTRL</kbd> + <kbd>SHIFT</kbd> + <kbd>B</kbd></p>
+                    </div>
+
+                    <div class="card ind-2 cf">
+                        <h5 class="cf">Builder Menu<span class="light-keys right"><kbd>CTRL</kbd> + <kbd>SHIFT</kbd> + <kbd>B</kbd></span></h5>
+                        <p>Opens your Builder Menu</p>
+                    </div>
+
+                </section>
+
                 <section id="working-with-panels-mouseless">
                     <h3 >Working with Panels Mouseless</h3>
                     
