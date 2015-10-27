@@ -33,6 +33,12 @@
         "shell_cmd": "start chrome \"http://127.0.0.1:8080/?ws=127.0.0.1:8080&port=5858\" && node --debug-brk ${file}",
         "working_dir": "${file_path}",
         "shell": true
+       },
+       {
+        "name": "Open in Browser",
+        "shell_cmd": "start chrome ${file}",
+        "working_dir": "${file_path}",
+        "shell": true
        }
     ]
 }
