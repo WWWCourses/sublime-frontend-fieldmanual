@@ -1,21 +1,40 @@
 @font-face {
   font-family: 'Source Code Pro';
-  font-style: normal;
   font-weight: 400;
-  src: local('Source Code Pro'), local('SourceCodePro-Regular'), url(sourcecodepro.woff2) format('woff2');
+  font-style: normal;
+  src: url('sourcecode/Source-Code-Pro-regular.eot');
+  src: url('sourcecode/Source-Code-Pro-regular.eot?#iefix') format('embedded-opentype'),
+       local('Source Code Pro'),
+       local('Source-Code-Pro-regular'),
+       url('sourcecode/Source-Code-Pro-regular.woff2') format('woff2'),
+       url('sourcecode/Source-Code-Pro-regular.woff') format('woff'),
+       url('sourcecode/Source-Code-Pro-regular.ttf') format('truetype')
 }
+
 
 @font-face {
   font-family: 'Open Sans';
-  font-style: normal;
   font-weight: 400;
-  src: local('Open Sans'), local('OpenSans'), url(opensans.woff2) format('woff2');
+  font-style: normal;
+  src: url('opensans/Open-Sans-regular.eot');
+  src: url('opensans/Open-Sans-regular.eot?#iefix') format('embedded-opentype'),
+       local('Open Sans'),
+       local('Open-Sans-regular'),
+       url('opensans/Open-Sans-regular.woff2') format('woff2'),
+       url('opensans/Open-Sans-regular.woff') format('woff'),
+       url('opensans/Open-Sans-regular.ttf') format('truetype')
 }
+
 
 @font-face {
   font-family: 'Raleway';
+  font-weight: 400;
   font-style: normal;
-  font-weight: 800;
-  src: local('Raleway ExtraBold'), local('Raleway-ExtraBold'), url(raleway.woff2) format('woff2');
+  src: url('raleway/Raleway-800.eot');
+  src: url('raleway/Raleway-800.eot?#iefix') format('embedded-opentype'),
+       local('Raleway ExtraBold'),
+       local('Raleway-800'),
+       url('raleway/Raleway-800.woff2') format('woff2'),
+       url('raleway/Raleway-800.woff') format('woff'),
+       url('raleway/Raleway-800.ttf') format('truetype')
 }
-
