@@ -1,8 +1,6 @@
 var app = angular.module('sublime-tutorial', ['duScroll', 'ngTouch', 'angularModalService']);
 app.value('duScrollOffset', 100);
 
-
-console.log("asdf")
 app.controller('tutorial', ['$scope', '$document',
     function($scope, $document) {
         $scope.open = true;
