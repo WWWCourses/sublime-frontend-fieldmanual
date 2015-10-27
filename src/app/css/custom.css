@@ -509,6 +509,25 @@ code.filehint {
  		height: 130px;
  	}
 
+@media only screen and (max-width: 630px) {
+	.ind {
+		width: 100%;
+		margin-left:0;
+	}
+
+	.ind-2 {
+		width: 100%;
+		margin-left:0;
+	}
+
+	.bookmarks {
+		width: 320px;
+	}
+
+	#toggle.open {
+ 		left: 290px;
+ 	}
+}
 
 @media only screen and (max-width: 1100px) {
 	#content {
