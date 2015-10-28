@@ -3,22 +3,25 @@ app.value('duScrollOffset', 100);
 
 app.controller('tutorial', ['$scope', '$document',
     function($scope, $document) {
-        $scope.open = true;
+        $scope.close = true;
 
-        $scope.$watch('open', function(nv, ov) {
+        
+        $scope.$watch('close', function(nv, ov) {
             if (nv === true) {
                 $document[0].querySelector('.bookmarks').className = 'bookmarks';
                 $document[0].getElementById('toggle').className = '';
+
             } else {
                 $document[0].querySelector('.bookmarks').className = 'bookmarks open';
                 $document[0].getElementById('toggle').className = 'open';
+
+
             }
         });
 
         $scope.toggle = function() {
-            $scope.open ? $scope.open = false : $scope.open = true;
+            $scope.close ? $scope.close = false : $scope.close = true;
         };
-
     }
 ]);
 
