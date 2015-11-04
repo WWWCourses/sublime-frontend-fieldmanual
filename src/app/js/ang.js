@@ -89,11 +89,18 @@ app.controller('tutorial', ['$scope', '$document', '$window',
         $parent = $scope;
         $scope.close = true;
         $scope.navi = NAVI;
-        $scope.showmenu = false;
+        $scope.showmenu = true;
+
+        
+        angular.element(document.getElementById('searchinput')).on('blur', function() {
+            $scope.$apply(function() {
+                $scope.showmenu = false;
+            });         
+        });
 
         angular.element($window).on('keydown', function(e) {
             
-            if (e.keyCode === 114 || (e.ctrlKey && e.keyCode === 70)) {
+            if ((e.ctrlKey && e.keyCode === 70) || (e.ctrlKey && e.keyCode === 80)) {
                 $scope.$apply(function() {
                     $scope.showmenu = true;                    
                 });
@@ -146,6 +153,7 @@ app.directive('search', ['$document',
             link: function($scope, element, attrs) {
                 $scope.items = [];
                 $scope.active = 0; 
+
                 $scope.arrows = function($event) {
                     switch($event.keyCode) {
 

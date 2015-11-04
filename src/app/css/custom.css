@@ -405,10 +405,9 @@ code.filehint {
 
 #search > ul {
 	margin: 5px 0 0 5px;
-	width: 388px;
-	
+	width: 388px;	
 	display:block;
-	overflow: hidden;	
+	padding-bottom: 5px;
 }
 
 #search > ul > li {
