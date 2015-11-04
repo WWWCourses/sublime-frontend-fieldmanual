@@ -89,7 +89,7 @@ app.controller('tutorial', ['$scope', '$document', '$window',
         $parent = $scope;
         $scope.close = true;
         $scope.navi = NAVI;
-        $scope.showmenu = true;
+        $scope.showmenu = false;
 
         
         angular.element(document.getElementById('searchinput')).on('blur', function() {
