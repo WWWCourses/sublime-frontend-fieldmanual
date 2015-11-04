@@ -93,9 +93,11 @@ app.controller('tutorial', ['$scope', '$document', '$window',
 
         
         angular.element(document.getElementById('searchinput')).on('blur', function() {
-            $scope.$apply(function() {
-                $scope.showmenu = false;
-            });         
+            setTimeout(function() {
+                $scope.$apply(function() {
+                    $scope.showmenu = false;
+                });         
+            },300);
         });
 
         angular.element($window).on('keydown', function(e) {
