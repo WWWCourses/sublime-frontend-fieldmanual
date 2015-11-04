@@ -1,11 +1,115 @@
+var NAVI = [{
+        link: '#who-is-this-for',
+        title: 'Whos this for',
+        childs: null
+    }, {
+        link: '#the-magic-of-shortcuts',
+        title: 'The magic of Shortcuts',
+        childs: [{
+            link: '#kbd-p',
+            title: 'P stands for Project'
+        }, {
+            link: '#kbd-r',
+            title: 'R stands for Read Symbols'
+        }, {
+            link: '#kbd-j',
+            title: 'J stands for Joining'
+        }, {
+            link: '#kbd-l',
+            title: 'L stands for Lines'
+        }, {
+            link: '#kbd-d',
+            title: 'D stands for Duplicate'
+        }, {
+            link: '#kbd-b',
+            title: 'B stands for Build'
+        }]
+    }, {
+        link: '#working-with-panels-mouseless',
+        title: 'Working with Panels Mouseless',
+        childs: null
+    }, {
+        link: '#howto-configure-sublime-text',
+        title: 'Howto Configure Sublime Text',
+        childs: null
+    }, {
+        link: '#installing-packagecontrol-and-nodejs',
+        title: 'Installing PackageControl and NodeJS',
+        childs: null
+    }, {
+        link: '#favourite-javascript-plugins',
+        title: 'Configs for popular JS-Plugins',
+        childs: [{
+            link: '#plug-evalprinter',
+            title: 'EvalPrinter'
+        }, {
+            link: '#plug-jshintgutter',
+            title: 'JSHint Gutter'
+        }, {
+            link: '#plug-docblockr',
+            title: 'DocBlockr'
+        }, {
+            link: '#plug-favs',
+            title: 'My favourite Sublime Text Plugins'
+        }, ]
+    }, {
+        link: '#js-codeintelligence',
+        title: 'JavaScript CodeIntelligence',
+        childs: [{
+            link: '#js-codeintel-install',
+            title: 'Installing the Plugin'
+        }, {
+            link: '#js-codeintel-setup',
+            title: 'Setup TernJS File'
+        }, ]
+    },
+
+    {
+        link: '#setup-your-projectfile',
+        title: 'Setup Your Projectfile',
+        childs: null
+    }, {
+        link: '#setup-builders',
+        title: 'Setup Sublime Builders',
+        childs: [{
+            link: '#install-nodejs-modules',
+            title: 'Installing NodeJS Modules'
+        }, {
+            link: '#config-builder-confs',
+            title: 'Builder Configs'
+        }]
+    }
+];
+
 var app = angular.module('sublime-tutorial', ['duScroll', 'ngTouch', 'angularModalService']);
 app.value('duScrollOffset', 100);
 
-app.controller('tutorial', ['$scope', '$document',
-    function($scope, $document) {
+app.controller('tutorial', ['$scope', '$document', '$window',
+    function($scope, $document, $window) {
+        $parent = $scope;
         $scope.close = true;
+        $scope.navi = NAVI;
+        $scope.showmenu = false;
 
-        
+        angular.element($window).on('keydown', function(e) {
+            
+            if (e.keyCode === 114 || (e.ctrlKey && e.keyCode === 70)) {
+                $scope.$apply(function() {
+                    $scope.showmenu = true;                    
+                });
+                document.getElementById('searchinput').focus();
+                e.stopImmediatePropagation();
+                e.preventDefault();
+                e.stopPropagation();                
+            }
+
+            if (e.keyCode === 27) {
+                $scope.$apply(function() {
+                   $scope.showmenu = false;
+                });                
+            }
+        });
+
         $scope.$watch('close', function(nv, ov) {
             if (nv === true) {
                 $document[0].querySelector('.bookmarks').className = 'bookmarks';
@@ -21,6 +125,61 @@ app.controller('tutorial', ['$scope', '$document',
 
         $scope.toggle = function() {
             $scope.close ? $scope.close = false : $scope.close = true;
+        };
+    }
+]);
+
+
+/*
+                                                                                                                                                                    item in filtered = (list | property:'customfield_10841.value': cFilter.targetGroup.value | property:'customfield_10850.value': cFilter.product.value | property:'version': cFilter.version.value || undefined)  track by $index"
+ */
+app.directive('search', ['$document',
+
+    function($document) {
+        return {
+            restrict: 'AE',
+            scope: {
+                show: '='
+            },
+            template: '<div id="search" ng-class="{show: show}"><input id="searchinput" ng-keyup="arrows($event)" ng-model="search" type="text" /><ul><li ng-class="{active: active === $index}" ng-repeat="item in filtered = (items | filter: search) track by $index"><a du-smooth-scroll href="{{item.link}}">{{item.title}}</a></li></ul></div>',
+            
+            link: function($scope, element, attrs) {
+                $scope.items = [];
+                $scope.active = 0; 
+                $scope.arrows = function($event) {
+                    switch($event.keyCode) {
+
+                        case 13: // enter
+                            var elem = angular.element(document.getElementById($scope.filtered[$scope.active].link.substring(1)));
+                            $document.scrollToElementAnimated(elem);
+                            $scope.show = false;
+                        break;
+                        
+                        case 38:
+                            if ($scope.active !== 0) {
+                                $scope.active--;
+                            }
+                        break;
+
+                        case 40:
+                            if ($scope.active <= $scope.filtered.length) {
+                                $scope.active++;
+                            }
+                        break;
+                    }    
+                };
+
+                for (var i = 0; i < NAVI.length; i++) {
+                    var el = NAVI[i];
+                    $scope.items.push(el);
+                    if (el.childs !== null) {
+                        for (var k = 0; k < el.childs.length; k++) {
+                            $scope.items.push(el.childs[k]);
+                        }
+                    }
+                }
+                
+            }
         };
     }
 ]);

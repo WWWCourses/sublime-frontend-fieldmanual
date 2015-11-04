@@ -375,6 +375,63 @@ code.filehint {
   background-color: #161616;
 }
 
+#search {
+	width: 400px;
+	background-color: #484848;
+	color: white;
+	border: 1px solid #0e0e0e;
+	z-index:3;    
+    margin-left: -200px;
+    top: 0px;
+    left: 50%;
+    position: fixed;
+    display:none;
+}
+
+#search.show {
+	display:block;
+}
+
+#search > input {
+	margin: 5px 0 0 5px;
+	width: 388px;
+	background-color: #383838;
+	height: 30px;
+	padding: 0 0 0 5px;
+	border: 1px solid #292929;
+	box-shadow: inset 0px 0px 3px 0px rgba(0, 0, 0, 0.35);
+	color: white;
+}
+
+#search > ul {
+	margin: 5px 0 0 5px;
+	width: 388px;
+	
+	display:block;
+	overflow: hidden;	
+}
+
+#search > ul > li {
+	font-size: 13px;
+	padding-left: 5px;
+	border-top: 1px solid #323232;
+	border-bottom: 1px solid #212121;
+	background-color: #292929;
+}
+
+#search > ul > li:hover,#search > ul > li.active {
+	
+	background-color: #181818;
+}
+
+#search a, #search a:link, #search a:visited, #search a:active, #search a:hover {
+	color: white;
+	text-decoration: none;
+	
+	display: inline-block;
+	width: 100%;
+}
+
 #preloader {
 	z-index:9999;
 	width: 100%;

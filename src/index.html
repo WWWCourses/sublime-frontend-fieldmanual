@@ -67,8 +67,8 @@
         <div id="toggle" ng-click="toggle()" ng-model="open"></div>
         <div id="preloader">
             <div class="dot"></div>
-        </div>
-
+        </div>        
+        <search show="showmenu"></search>
         <div class="hero">
             <h1>Sublime Text 3 Fieldmanual</h1>
             <h2>For Frontend Developers</h2>
@@ -76,46 +76,12 @@
         <div class="bookmarks">
             <div id="menu" ng-mouseleave="close=true">
                 <ul du-spy-context id="nav">
-                    <li><a href="#who-is-this-for" du-smooth-scroll du-scrollspy>Whos this for</a></li>
-                    <li><a href="#the-magic-of-shortcuts" du-smooth-scroll du-scrollspy>The magic of Shortcuts</a>
-                    <ul>
-                        <li><a du-smooth-scroll du-scrollspy href="#kbd-p">P stands for Project</a></li>
-                        <li><a du-smooth-scroll du-scrollspy href="#kbd-r">R stands for Read Symbols</a></li>
-                        <li><a du-smooth-scroll du-scrollspy href="#kbd-j">J stands for Joining</a></li>
-                        <li><a du-smooth-scroll du-scrollspy href="#kbd-l">L stands for Lines</a></li>
-                        <li><a du-smooth-scroll du-scrollspy href="#kbd-d">D stands for Duplicate</a></li>
-                        <li><a du-smooth-scroll du-scrollspy href="#kbd-b">B stands for Build</a></li>
-                    </ul>
-                    </li>
-                    <li><a du-smooth-scroll du-scrollspy href="#working-with-panels-mouseless">Working with Panels Mouseless</a></li>
 
-                    <li><a du-smooth-scroll du-scrollspy href="#howto-configure-sublime-text">Howto Configure Sublime Text</a></li>
-                    <li><a du-smooth-scroll du-scrollspy href="#installing-packagecontrol-and-nodejs">Installing PackageControl and NodeJS</a></li>
-                    <li><a du-smooth-scroll du-scrollspy href="#favourite-javascript-plugins">Configs for popular JS-Plugins</a>
-
-
-                    <ul>
-                        <li><a du-smooth-scroll du-scrollspy href="#plug-evalprinter">EvalPrinter</a></li>
-                        <li><a du-smooth-scroll du-scrollspy href="#plug-jshintgutter">JSHint Gutter</a></li>
-                        <li><a du-smooth-scroll du-scrollspy href="#plug-docblockr">DocBlockr</a></li>
-                        <li><a du-smooth-scroll du-scrollspy href="#plug-favs">My favourite Sublime Text Plugins</a></li>
-                    </ul>
-                    </li>
-
-                    <li><a du-smooth-scroll du-scrollspy href="#js-codeintelligence">JavaScript CodeIntelligence</a>
-                    <ul>
-                        <li><a du-smooth-scroll du-scrollspy href="#js-codeintel-install">Installing the Plugin</a></li>
-                        <li><a du-smooth-scroll du-scrollspy href="#js-codeintel-setup">Setup TernJS File</a></li>
-                    </ul>
-                    </li>
-                    <li><a du-smooth-scroll du-scrollspy href="#setup-your-projectfile">Setup Your Projectfile</a></li>
-                    <li><a du-smooth-scroll du-scrollspy href="#setup-builders">Setup Sublime Builders</a>
-                        <ul>
-                        <li><a du-smooth-scroll du-scrollspy href="#install-nodejs-modules">Installing NodeJS Modules</a></li>
-                        <li><a du-smooth-scroll du-scrollspy href="#config-builder-confs">Builder Configs</a></li>
-                        </ul>
-                    </li>
+                <li ng-repeat="link in navi"><a du-smooth-scroll du-scrollspy href="{{link.link}}">{{link.title}}</a>
+                <ul ng-if="link.childs !== null">
+                    <li ng-repeat="child in link.childs"><a du-smooth-scroll du-scrollspy href="{{child.link}}">{{child.title}}</a></li>
                 </ul>
+                </li>
             </div>
         </div>
         <div class="content" id="content">
