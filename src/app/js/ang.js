@@ -172,9 +172,13 @@ app.directive('search', ['$document',
                         break;
 
                         case 40:
-                            if ($scope.active <= $scope.filtered.length) {
+                            if ($scope.active < $scope.filtered.length - 1 ) {
                                 $scope.active++;
                             }
+                        break;
+
+                        default:
+                            $scope.active = 0;
                         break;
                     }    
                 };
